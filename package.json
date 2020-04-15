@@ -1,0 +1,43 @@
+{
+  "name": "Charts",
+  "version": "1.2.2",
+  "description": "An SVG charting library",
+  "main": "dist/Charts.js",
+  "scripts": {
+    "docs": "webpack --mode production",
+    "lint": "chq-scripts lint",
+    "prepublishOnly": "rm -f dist/* && babel src --out-dir ./dist --ignore '**/__tests__/**' && cp src/style.css dist/style.css",
+    "start": "webpack-dev-server --mode development --hot",
+    "test": "chq-scripts test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charts/charts.git"
+  },
+  "author": "Kevin Deisz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/charts/charts/issues"
+  },
+  "homepage": "https://github.com/charts/charts#readme",
+  "peerDependencies": {
+    "react": "^16",
+    "react-dom": "^16"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.0.0",
+    "@charts/scripts": "^5.1.4",
+    "@testing-library/react": "^10.0.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
